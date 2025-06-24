@@ -141,6 +141,35 @@
             color: white;
         }
         
+        /* About Section */
+        .about {
+            padding: 80px 0;
+            background-color: white;
+        }
+        
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+        
+        .about-text {
+            flex: 1;
+        }
+        
+        .about-image {
+            flex: 1;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
         /* Services Section */
         .services {
             padding: 80px 0;
@@ -293,6 +322,18 @@
             color: white;
         }
         
+        .footer-contact a {
+            color: #cbd5e1;
+            text-decoration: none;
+            transition: color 0.3s;
+            display: block;
+            margin-bottom: 10px;
+        }
+        
+        .footer-contact a:hover {
+            color: white;
+        }
+        
         .copyright {
             text-align: center;
             padding-top: 20px;
@@ -315,6 +356,14 @@
         @media (max-width: 768px) {
             .nav-links {
                 display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 80px;
+                left: 0;
+                right: 0;
+                background-color: white;
+                padding: 20px;
+                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
             }
             
             .mobile-menu-btn {
@@ -332,6 +381,10 @@
             .hero-buttons {
                 flex-direction: column;
                 align-items: center;
+            }
+            
+            .about-content {
+                flex-direction: column;
             }
         }
     </style>
@@ -363,6 +416,23 @@
                 <a href="#services" class="secondary-button">Our Services</a>
             </div>
             <img src="https://via.placeholder.com/800x400" alt="SEO results dashboard" width="800" height="400">
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>About ProRank SEO</h2>
+                    <p>Founded in 2015, ProRank SEO has been helping businesses of all sizes achieve their digital marketing goals through strategic search engine optimization. Our team of certified SEO experts combines technical expertise with creative marketing strategies to deliver measurable results.</p>
+                    <p>We believe in transparent, ethical SEO practices that stand the test of time. Unlike agencies that promise overnight results, we focus on sustainable growth that will continue to benefit your business for years to come.</p>
+                    <a href="#contact" class="cta-button" style="display: inline-block; margin-top: 20px;">Learn More About Us</a>
+                </div>
+                <div class="about-image">
+                    <img src="https://via.placeholder.com/600x400" alt="ProRank SEO team working" width="600" height="400">
+                </div>
+            </div>
         </div>
     </section>
 
@@ -446,36 +516,45 @@
                 <div class="footer-column">
                     <h3>ProRank SEO</h3>
                     <p>Helping businesses grow through strategic search engine optimization since 2015.</p>
+                    <ul>
+                        <li><a href="#about">About Our Company</a></li>
+                        <li><a href="#testimonials">Client Success Stories</a></li>
+                    </ul>
                 </div>
                 <div class="footer-column">
                     <h3>Services</h3>
                     <ul>
-                        <li><a href="#">Keyword Research</a></li>
-                        <li><a href="#">On-Page SEO</a></li>
-                        <li><a href="#">Link Building</a></li>
-                        <li><a href="#">Local SEO</a></li>
+                        <li><a href="#services">Keyword Research</a></li>
+                        <li><a href="#services">On-Page SEO</a></li>
+                        <li><a href="#services">Link Building</a></li>
+                        <li><a href="#services">Local SEO</a></li>
+                        <li><a href="#services">SEO Analytics</a></li>
+                        <li><a href="#services">Content Marketing</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
                     <h3>Company</h3>
                     <ul>
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Case Studies</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#services">Our Services</a></li>
+                        <li><a href="#testimonials">Case Studies</a></li>
                         <li><a href="#">Blog</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#">Careers</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
                     <h3>Contact</h3>
-                    <ul>
-                        <li>info@prorankseo.com</li>
-                        <li>(555) 123-4567</li>
-                        <li>123 SEO Street, Digital City</li>
-                    </ul>
+                    <div class="footer-contact">
+                        <a href="mailto:info@prorankseo.com">info@prorankseo.com</a>
+                        <a href="tel:5551234567">(555) 123-4567</a>
+                        <a href="https://maps.google.com" target="_blank">123 SEO Street, Digital City</a>
+                        <a href="#contact">Request a Consultation</a>
+                    </div>
                 </div>
             </div>
             <div class="copyright">
-                <p>&copy; 2023 ProRank SEO. All rights reserved.</p>
+                <p>&copy; 2023 ProRank SEO. All rights reserved. <a href="#" style="color: #94a3b8;">Privacy Policy</a> | <a href="#" style="color: #94a3b8;">Terms of Service</a></p>
             </div>
         </div>
     </footer>
